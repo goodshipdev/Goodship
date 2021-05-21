@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Goodship Token</title>
-    <meta name="description" content="" />
+    <meta name="description" content="BSC token alleviating poverty with GiveDirectly" />
     <meta name="keywords" content="" />
 
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
@@ -18,6 +18,26 @@
 
       html {
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+
+      .videoWrapper {
+        position: relative;
+        padding-bottom: 26.25%; /* 16:9 */
+        height: 0;
+      }
+      @media (max-width: 450px) {
+        .videoWrapper {
+          padding-bottom: 46.25%;
+        }
+      }
+      
+
+      .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     </style>
     <script>
@@ -130,7 +150,7 @@
       <div class="container pt-4 md:pt-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 
         <!--Left Col-->
-        <div class="flex flex-col w-full xl:w-1/2 justify-center lg:items-start overflow-y-hidden">
+        <div class="flex flex-col w-full xl:w-1/2 justify-center items-center lg:items-start overflow-y-hidden">
           <h1 class="my-4 text-5xl md:text-8xl text-white opacity-75 font-bold leading-tight text-center md:text-left">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
               Make
@@ -190,8 +210,48 @@
         </div>
         </div>
 
+
+        <!--GiveDirectly Video section-->
+        <section class="text-gray-300 body-font">
+          <div class="container mx-auto flex px-5 py-24 lg:py-44 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 videoWrapper">
+              <iframe width="560" height="315"  
+              src="https://www.youtube.com/embed/1l9dDEZn-lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+              <h1 class="title-font sm:text-5xl text-2xl mb-4 text-blue-400 font-bold">Alleviating poverty with GiveDirectly
+                
+              </h1>
+              <p class="mb-8 leading-relaxed">Goodship is partnered with GiveDirectly, a top global charity that has given over $300M directly to people living in poverty. Vitalik Buterin and Elon Musk are recent donors – you can be, too!<br><br>
+              Watch the video to see GiveDirectly's Managing Director Joe Huston give a special shoutout to the Goodship community!</p>
+              <div class="flex items-center justify-between pt-4">
+                <button
+                  class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-4 px-8 ml-3 rounded-lg focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                  type="button"
+                  target="_blank"
+                  onclick="window.open('https://www.notion.so/Goodship-Roadmap-e86f3ae65f244a6fac16b96057945917', 'Roadmap');"
+                >
+                  Learn about GiveDirectly
+                </button>
+                <button
+              class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-4 px-8 ml-3 rounded-lg focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+              type="button"
+              target="_blank"
+              onclick="window.open('https://www.notion.so/Goodship-FAQ-244373dac2004d8a9f332b333cddc8e6', 'FAQ');"
+            >
+              Join the Community
+            </button>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+
+
+
         <!--Tokenomics section-->
-        <section class="text-gray-600 body-font mt-20">
+        <section class="text-gray-600 body-font mt-2">
           
           <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
@@ -252,15 +312,13 @@
         <!--Roadmap Section-->
         <section class="text-gray-300 body-font">
           <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-              <img class="object-cover object-center rounded" alt="hero" src="roadmap.png">
-            </div>
+            
             <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
               <h1 class="title-font sm:text-5xl text-2xl mb-4 text-blue-400 font-bold">Roadmap through 2026
                 
               </h1>
               <p class="mb-8 leading-relaxed">A token is just the beginning. We plan to build a suite of financial services including remittances, savings accounts, low-interest lending, and more. Services that will reach hundreds of millions of people.</p>
-              <div class="flex items-center justify-between pt-4">
+              <div class="flex items-center justify-between pt-4 pb-16">
                 <button
                   class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-4 px-8 ml-3 rounded-lg focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
                   type="button"
@@ -279,50 +337,14 @@
             </button>
               </div>
             </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+              <img class="object-cover object-center rounded" alt="hero" src="roadmap.png">
+            </div>
           </div>
         </section>
 
 
-                <!--GiveDirectly section-->
-                <section class="text-gray-600 body-font mt-20">
-          
-                  <div class="container px-5 py-24 mx-auto">
-                    <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-                      <h1 class="sm:text-5xl text-2xl font-medium title-font mb-2 text-blue-400 font-bold">Alleviating poverty with GiveDirectly</h1>
-                      <p class="lg:w-1/2 w-full leading-relaxed text-gray-200">They've given $300M+ to people living in poverty. Vitalik Buterin and Elon Musk are recent donors – you can be, too!</p>
-        
-                      <div class="mx-auto md:pt-16">
-                        <h3 class="sm:text-2xl text-xl text-blue-400 font-bold pb-4 lg:pb-2 text-center">
-                          Yes, the money really does go to GiveDirectly!  
-                        </h3>
-                        
-                        <p class="w-full leading-relaxed text-gray-200 pb-8">Hop into our TG and say hello to Anna from GiveDirectly yourself :)</p>
-                      
-                          <button
-                            class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-4 px-8 ml-3 rounded-lg focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                            type="button"
-                            target="_blank"
-                            onclick="window.open('https://givedirectly.org', 'GiveDirectly');"
-                          >
-                            Visit GiveDirectly.org
-                          </button>
-                          <button
-                            class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-4 px-8 ml-3 rounded-lg focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                            type="button"
-                            target="_blank"
-                            onclick="window.open('https://t.me/joinchat/RU3z9hzqT6JlZWNk', 'Telegram');"
-                          >
-                            Join the Community
-                          </button>
-                        </div>
-                      </div>
-                      </div>
-                    </div>
-                    </div>
-        
-                    </div>
-                    
-                </section>
+
 
         <!--How To Buy section-->
 
@@ -527,18 +549,111 @@
       target="_blank"
       onclick="window.open('https://bscscan.com/address/0x1fc891697728639d959ee715fb27ed93dc320eef#code', 'Contract');"
     >
-      View Contract on BSC
+      View Contract on BSCScan
     </button>
   </div>
 </div>
 </div>
+</section>
 
 
 
         <!--Footer-->
-        <div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
+        <!--<div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
           <a class="text-gray-500 no-underline hover:no-underline" href="#">&copy; Goodship Token 2021.</a>
-        </div>
+        </div>-->
+        <footer class="text-gray-500 body-font">
+          <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">$Goodship</span>
+            </a>
+
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2021 Goodship 
+            </p>
+            
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+
+              <div class="inline-flex sm:mt-0 mt-4 flex lg:w-1/2 justify-end content-center sm:justify-start">
+                <!--Twitter-->
+                <a class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out" href="https://twitter.com/goodship3" target="_blank">
+                  <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path
+                      d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"
+                    ></path>
+                  </svg>
+                </a>
+                <!--Facebook
+                <a
+                  class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                  href="https://www.facebook.com/sharer/sharer.php?u=#"
+                >
+                  <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
+                  </svg>
+                </a>
+                -->
+                <!--Telegram-->
+                <a
+                  class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                  href="https://t.me/joinchat/RU3z9hzqT6JlZWNk"
+                  target="_blank"
+                >
+                <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/>
+                </svg>
+              </a>
+                <!--Discord-->
+                <a
+                class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                href="https://discord.gg/5AP6qq54U2"
+                target="_blank"
+                >
+                <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                  width="24" height="24"
+                  viewBox="0 0 24 24">    
+                  <path d="M19.952,5.672c-1.904-1.531-4.916-1.79-5.044-1.801c-0.201-0.017-0.392,0.097-0.474,0.281 c-0.006,0.012-0.072,0.163-0.145,0.398c1.259,0.212,2.806,0.64,4.206,1.509c0.224,0.139,0.293,0.434,0.154,0.659 c-0.09,0.146-0.247,0.226-0.407,0.226c-0.086,0-0.173-0.023-0.252-0.072C15.584,5.38,12.578,5.305,12,5.305S8.415,5.38,6.011,6.872 c-0.225,0.14-0.519,0.07-0.659-0.154c-0.14-0.225-0.07-0.519,0.154-0.659c1.4-0.868,2.946-1.297,4.206-1.509 c-0.074-0.236-0.14-0.386-0.145-0.398C9.484,3.968,9.294,3.852,9.092,3.872c-0.127,0.01-3.139,0.269-5.069,1.822 C3.015,6.625,1,12.073,1,16.783c0,0.083,0.022,0.165,0.063,0.237c1.391,2.443,5.185,3.083,6.05,3.111c0.005,0,0.01,0,0.015,0 c0.153,0,0.297-0.073,0.387-0.197l0.875-1.202c-2.359-0.61-3.564-1.645-3.634-1.706c-0.198-0.175-0.217-0.477-0.042-0.675 c0.175-0.198,0.476-0.217,0.674-0.043c0.029,0.026,2.248,1.909,6.612,1.909c4.372,0,6.591-1.891,6.613-1.91 c0.198-0.172,0.5-0.154,0.674,0.045c0.174,0.198,0.155,0.499-0.042,0.673c-0.07,0.062-1.275,1.096-3.634,1.706l0.875,1.202 c0.09,0.124,0.234,0.197,0.387,0.197c0.005,0,0.01,0,0.015,0c0.865-0.027,4.659-0.667,6.05-3.111 C22.978,16.947,23,16.866,23,16.783C23,12.073,20.985,6.625,19.952,5.672z M8.891,14.87c-0.924,0-1.674-0.857-1.674-1.913 s0.749-1.913,1.674-1.913s1.674,0.857,1.674,1.913S9.816,14.87,8.891,14.87z M15.109,14.87c-0.924,0-1.674-0.857-1.674-1.913 s0.749-1.913,1.674-1.913c0.924,0,1.674,0.857,1.674,1.913S16.033,14.87,15.109,14.87z"></path>
+                </svg>
+                </a>
+    
+                <!--Reddit-->
+                <a
+                class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                href="https://www.reddit.com/r/Goodship/"
+                target="_blank"
+                >
+                <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.058c0 1.193.975 2.163 2.174 2.163 1.198 0 2.172-.97 2.172-2.163s-.975-2.164-2.172-2.164c-.92 0-1.704.574-2.021 1.379l-4.329-1.015c-.189-.046-.381.063-.44.249l-1.654 5.207c-2.838.034-5.409.798-7.3 2.025-.474-.438-1.103-.712-1.799-.712-1.465 0-2.656 1.187-2.656 2.646 0 .97.533 1.811 1.317 2.271-.052.282-.086.567-.086.857 0 3.911 4.808 7.093 10.719 7.093s10.72-3.182 10.72-7.093c0-.274-.029-.544-.075-.81.832-.447 1.405-1.312 1.405-2.318zm-17.224 1.816c0-.868.71-1.575 1.582-1.575.872 0 1.581.707 1.581 1.575s-.709 1.574-1.581 1.574-1.582-.706-1.582-1.574zm9.061 4.669c-.797.793-2.048 1.179-3.824 1.179l-.013-.003-.013.003c-1.777 0-3.028-.386-3.824-1.179-.145-.144-.145-.379 0-.523.145-.145.381-.145.526 0 .65.647 1.729.961 3.298.961l.013.003.013-.003c1.569 0 2.648-.315 3.298-.962.145-.145.381-.144.526 0 .145.145.145.379 0 .524zm-.189-3.095c-.872 0-1.581-.706-1.581-1.574 0-.868.709-1.575 1.581-1.575s1.581.707 1.581 1.575-.709 1.574-1.581 1.574z"/></svg>
+                </a>
+    
+    
+              <!--Pancakeswap-->
+              <a
+                  class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                  href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x1fc891697728639d959ee715fb27ed93dc320eef"
+                  target="_blank"
+                >
+                <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 31.7 32" style="enable-background:new 0 0 31.7 32;" xml:space="preserve">
+                  <!--<style type="text/css">
+                    .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#633001;}
+                    .st1{fill:#FEDC90;}
+                    .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#D1884F;}
+                    .st3{fill:#633001;}
+                  </style>-->
+                  <path class="st0" d="M5.7,5C5.2,2.4,7.2,0,9.8,0c2.3,0,4.2,1.9,4.2,4.2v5.2c0.6,0,1.2-0.1,1.8-0.1c0.6,0,1.1,0,1.7,0.1V4.2  c0-2.3,1.9-4.2,4.2-4.2c2.6,0,4.6,2.4,4.2,5l-1.1,6.1c3.9,1.7,6.9,4.7,6.9,8.4v2.3c0,3.1-2,5.7-4.9,7.4c-2.9,1.8-6.7,2.8-11,2.8  s-8.1-1-11-2.8C2,27.5,0,24.9,0,21.8v-2.3c0-3.7,2.9-6.7,6.8-8.4L5.7,5z M23.3,11.9l1.3-7.2c0.3-1.8-1-3.5-2.9-3.5  c-1.6,0-2.9,1.3-2.9,2.9v6.6c-0.4-0.1-0.9-0.1-1.3-0.1c-0.6,0-1.1-0.1-1.7-0.1c-0.6,0-1.2,0-1.8,0.1c-0.4,0-0.9,0.1-1.3,0.1V4.2  c0-1.6-1.3-2.9-2.9-2.9C8,1.3,6.6,3,7,4.8L8.3,12c-4.2,1.6-7,4.4-7,7.6v2.3c0,4.9,6.5,8.9,14.5,8.9c8,0,14.5-4,14.5-8.9v-2.3  C30.4,16.3,27.6,13.5,23.3,11.9z"/>
+                  <path class="st1" d="M30.4,21.8c0,4.9-6.5,8.9-14.5,8.9c-8,0-14.5-4-14.5-8.9v-2.3h29.1V21.8z"/>
+                  <path class="st2" d="M7,4.8C6.6,3,8,1.3,9.8,1.3c1.6,0,2.9,1.3,2.9,2.9v6.6c1-0.1,2-0.2,3.1-0.2c1,0,2,0.1,3,0.2V4.2  c0-1.6,1.3-2.9,2.9-2.9c1.8,0,3.2,1.7,2.9,3.5l-1.3,7.2c4.2,1.6,7.1,4.4,7.1,7.6c0,4.9-6.5,8.9-14.5,8.9c-8,0-14.5-4-14.5-8.9  c0-3.2,2.8-6,7-7.6L7,4.8z"/>
+                  <path class="st3" d="M11.8,18.9c0,1.3-0.7,2.4-1.6,2.4c-0.9,0-1.6-1.1-1.6-2.4s0.7-2.4,1.6-2.4C11.1,16.5,11.8,17.6,11.8,18.9z"/>
+                  <path class="st3" d="M22.9,18.9c0,1.3-0.7,2.4-1.6,2.4c-0.9,0-1.6-1.1-1.6-2.4s0.7-2.4,1.6-2.4C22.2,16.5,22.9,17.6,22.9,18.9z"/>
+                  </svg>
+              </a>
+              </div>
+            </span>
+
+          </div>
+        </footer>
+
+
+
+
       </div>
     </div>
 
